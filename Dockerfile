@@ -1,7 +1,7 @@
 FROM php:7.4-fpm
 
-ARG user
-ARG uid
+ARG user=php
+ARG uid=1000
 
 WORKDIR /var/www
 
