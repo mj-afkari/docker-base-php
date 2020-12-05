@@ -12,7 +12,7 @@ RUN apt-get update && \
     docker-php-ext-configure intl && \
     docker-php-ext-install pdo_mysql exif pcntl bcmath gd zip intl && \
     groupadd -g 1000 www && \
-    seradd -u 1000 -ms /bin/bash -g www www
+    useradd -u 1000 -ms /bin/bash -g www www
     
 
 RUN pecl install redis-5.1.1 \
