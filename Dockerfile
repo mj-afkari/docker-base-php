@@ -11,6 +11,7 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-configure intl && \
     docker-php-ext-install pdo_mysql exif pcntl bcmath gd zip intl && \
+    echo 'memory_limit = -1' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini && \
     groupadd -g 1000 www && \
     useradd -u 1000 -ms /bin/bash -g www www
     
